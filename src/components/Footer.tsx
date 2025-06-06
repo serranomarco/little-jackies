@@ -1,5 +1,4 @@
 import { Typography, Stack, IconButton, Box } from '@mui/material'
-import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone'
@@ -19,16 +18,14 @@ const Footer = () => {
                 lineHeight: 1.6,
             }}
         >
-            <Typography variant="h6" gutterBottom>
-                Little Jackie's Cleaning Service
-            </Typography>
+            <h6 className="mb-2">Little Jackie's Cleaning Service</h6>
 
             <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 spacing={2}
                 justifyContent="center"
                 alignItems="center"
-                sx={{ mb: 2 }}
+                sx={{ mb: 2, fontFamily: 'var(--font-roboto)' }}
             >
                 <Link
                     href="/"
@@ -88,14 +85,14 @@ const Footer = () => {
                 </IconButton>
             </Stack>
 
-            <Typography variant="body2" component="p">
+            <p className="text-sm">
                 Serving Portland, Oregon and surrounding areas
-            </Typography>
+            </p>
 
-            <Typography variant="body2" sx={{ mt: 1 }}>
+            <p className="text-sm mt-2">
                 &copy; {new Date().getFullYear()} Little Jackie's Cleaning
                 Service. All rights reserved.
-            </Typography>
+            </p>
         </Box>
     )
 }
