@@ -35,9 +35,11 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${roboto.variable} ${poppins.variable}`}>
-                <NavBar />
-                {children}
-                <Footer />
+                <div className="flex flex-col min-h-screen">
+                    <NavBar />
+                    {children}
+                    <Footer />
+                </div>
             </body>
         </html>
     )

@@ -18,6 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Link from 'next/link'
 import { useState } from 'react'
 import profilePic from '../../public/IMG_3519.jpg'
+import { usePathname } from 'next/navigation'
 
 const pages = [
     { tab: 'home', path: '' },
@@ -38,6 +39,8 @@ const LogoButton = () => (
 )
 
 const DesktopNav = () => {
+    const pathname = usePathname()
+    const isHome = pathname === '/'
     return (
         <Box className="flex justify-between items-center w-full">
             <LogoButton />
@@ -47,8 +50,12 @@ const DesktopNav = () => {
                         key={page.tab}
                         href={`/${page.path}`}
                         component={Link}
-                        color="inherit"
                         className="text-white normal-case hover:bg-white/10"
+                        sx={{
+                            color: isHome ? 'white' : 'black',
+                            fontFamily: 'var(--font-roboto)',
+                            fontWeight: 100,
+                        }}
                     >
                         {page.tab}
                     </Button>
@@ -60,6 +67,8 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
+    const pathname = usePathname()
+    const isHome = pathname === '/'
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget)
@@ -77,12 +86,11 @@ const MobileNav = () => {
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
-                color="inherit"
+                sx={{ px: 0, color: isHome ? 'white' : 'black' }}
             >
                 <MenuIcon />
             </IconButton>
 
-            {/* Centered logo */}
             <Box className="absolute left-1/2 transform -translate-x-1/2">
                 <LogoButton />
             </Box>
@@ -103,7 +111,7 @@ const MobileNav = () => {
                 slotProps={{
                     paper: {
                         sx: {
-                            backgroundColor: '#CFDBD5',
+                            backgroundColor: '#e1e5f2',
                             borderRadius: 2,
                             boxShadow: 4,
                             mt: 1,

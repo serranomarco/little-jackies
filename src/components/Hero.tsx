@@ -40,33 +40,12 @@ export const Hero = () => {
                 }}
             >
                 <Container maxWidth="md" className="text-center">
-                    <Typography
-                        variant="h1"
-                        sx={{
-                            fontSize: {
-                                xs: '2rem',
-                                sm: '3rem',
-                                md: '4rem',
-                            },
-                            fontFamily: 'font-family: var(--font-poppins)',
-                        }}
-                    >
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins">
                         Little Jackie's
-                    </Typography>
-                    <Typography
-                        variant="h2"
-                        sx={{
-                            fontSize: {
-                                xs: '1.2rem',
-                                sm: '1.8rem',
-                                md: '2.2rem',
-                            },
-                            mt: 1,
-                            fontFamily: 'font-family: var(--font-poppins)',
-                        }}
-                    >
+                    </h1>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl mt-2 font-poppins">
                         Cleaning Service
-                    </Typography>
+                    </h2>
                 </Container>
             </Box>
         </Box>

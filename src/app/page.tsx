@@ -22,6 +22,8 @@ export default function Home() {
                     width: '164px',
                     borderRadius: 50,
                     margin: '32px 0',
+                    fontFamily: 'var(--font-roboto)',
+                    fontWeight: 100,
                 }}
             >
                 Get a quote
@@ -31,76 +33,44 @@ export default function Home() {
 }
 
 const HomePageContent = () => {
-    const sectionTitleStyles = {
-        fontSize: {
-            xs: '1.8rem',
-            sm: '2.2rem',
-            md: '2.5rem',
-        },
-        mb: 4,
-        textAlign: 'center',
-        fontFamily: 'font-family: var(--font-poppins)',
-    }
-
-    const headingStyles = {
-        fontSize: {
-            xs: '1.2rem',
-            sm: '1.4rem',
-            md: '1.6rem',
-        },
-        m: 0,
-        fontFamily: 'font-family: var(--font-poppins)',
-    }
-
-    const bodyStyles = {
-        fontSize: {
-            xs: '1rem',
-            sm: '1.1rem',
-            md: '1.2rem',
-        },
-        lineHeight: 1.6,
-        fontFamily: 'var(--font-roboto)',
-        fontWeight: 100,
-    }
-
     return (
-        <Container maxWidth="md" sx={{ p: 4 }}>
-            <Typography variant="h3" sx={sectionTitleStyles}>
+        <div className="max-w-3xl px-4 py-8 mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-8">
                 Why Choose Us?
-            </Typography>
+            </h2>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <AttachMoneyIcon sx={{ mr: 1, color: 'primary.main' }} />
-                <Typography variant="h4" sx={headingStyles}>
+            <div className="flex items-center mb-2">
+                <AttachMoneyIcon className="text-[#478BBC] mr-2" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-poppins m-0">
                     Affordable Rates:
-                </Typography>
-            </Box>
-            <Typography variant="body1" sx={bodyStyles}>
+                </h3>
+            </div>
+            <p className="text-base sm:text-lg md:text-xl font-roboto font-thin leading-relaxed">
                 Quality cleaning that fits your budget — no surprises, just
                 great value.
-            </Typography>
+            </p>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', mt: 3, mb: 1 }}>
-                <AccessTimeIcon sx={{ mr: 1, color: 'primary.main' }} />
-                <Typography variant="h4" sx={headingStyles}>
+            <div className="flex items-center mt-6 mb-2">
+                <AccessTimeIcon className="text-[#478BBC] mr-2" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-poppins m-0">
                     Next-Day Service:
-                </Typography>
-            </Box>
-            <Typography variant="body1" sx={bodyStyles}>
+                </h3>
+            </div>
+            <p className="text-base sm:text-lg md:text-xl font-roboto font-thin leading-relaxed">
                 Need it cleaned fast? We offer reliable next-day appointments to
                 fit your schedule.
-            </Typography>
+            </p>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', mt: 3, mb: 1 }}>
-                <PhoneIcon sx={{ mr: 1, color: 'primary.main' }} />
-                <Typography variant="h4" sx={headingStyles}>
+            <div className="flex items-center mt-6 mb-2">
+                <PhoneIcon className="text-[#478BBC] mr-2" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-poppins m-0">
                     Easy Scheduling:
-                </Typography>
-            </Box>
-            <Typography variant="body1" sx={bodyStyles}>
+                </h3>
+            </div>
+            <p className="text-base sm:text-lg md:text-xl font-roboto font-thin leading-relaxed">
                 Just give us a call to book your cleaning — simple, personal,
                 and hassle-free.
-            </Typography>
-        </Container>
+            </p>
+        </div>
     )
 }
