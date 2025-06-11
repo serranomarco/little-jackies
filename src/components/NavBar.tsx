@@ -44,21 +44,28 @@ const DesktopNav = () => {
     return (
         <Box className="flex justify-between items-center w-full">
             <LogoButton />
-            <Box className="flex gap-4">
+            <Box className="flex gap-4 relative">
                 {pages.map((page) => (
-                    <Button
-                        key={page.tab}
-                        href={`/${page.path}`}
-                        component={Link}
-                        className="text-white normal-case hover:bg-white/10"
-                        sx={{
-                            color: isHome ? 'white' : 'black',
-                            fontFamily: 'var(--font-roboto)',
-                            fontWeight: 100,
-                        }}
-                    >
-                        {page.tab}
-                    </Button>
+                    <Box key={page.tab} className="relative group">
+                        <Button
+                            href={`/${page.path}`}
+                            component={Link}
+                            sx={{
+                                color: isHome ? 'white' : 'black',
+                                backgroundColor: 'transparent',
+                                fontFamily: 'var(--font-roboto)',
+                                fontWeight: 100,
+                                px: 2,
+                            }}
+                        >
+                            {page.tab}
+                        </Button>
+                        <Box
+                            className={`absolute left-0 bottom-0 w-full h-[2px] ${
+                                isHome ? 'bg-white' : 'bg-black'
+                            } scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300`}
+                        />
+                    </Box>
                 ))}
             </Box>
         </Box>

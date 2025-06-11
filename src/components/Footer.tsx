@@ -1,5 +1,5 @@
 import { Typography, Stack, IconButton, Box } from '@mui/material'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import FacebookIcon from '@mui/icons-material/Facebook'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone'
 import Link from 'next/link'
@@ -10,6 +10,7 @@ const Footer = () => {
             component="footer"
             sx={{
                 textAlign: 'center',
+                mt: 4,
                 py: 4,
                 px: 2,
                 backgroundColor: '#478BBC',
@@ -54,35 +55,41 @@ const Footer = () => {
             </Stack>
 
             <Stack
-                direction="row"
-                spacing={1.5}
+                direction={{ xs: 'column', sm: 'row' }}
+                spacing={2}
                 justifyContent="center"
                 alignItems="center"
-                sx={{ mb: 1 }}
+                sx={{ mb: 1, fontFamily: 'var(--font-roboto)' }}
             >
-                <IconButton
-                    component="a"
-                    href="mailto:serranomarco@hotmail.com"
-                    sx={{ color: '#fff', p: 0.5 }}
-                >
+                <Stack direction="row" alignItems="center" spacing={1}>
                     <EmailIcon fontSize="small" />
-                </IconButton>
-                <IconButton
-                    component="a"
-                    href="tel:+15035550123"
-                    sx={{ color: '#fff', p: 0.5 }}
-                >
+                    <a
+                        href="mailto:example@email.com"
+                        style={{ color: '#fff', textDecoration: 'none' }}
+                    >
+                        example@email.com
+                    </a>
+                </Stack>
+                <Stack direction="row" alignItems="center" spacing={1}>
                     <PhoneIcon fontSize="small" />
-                </IconButton>
-                <IconButton
-                    component="a"
-                    href="https://www.linkedin.com/in/marco-serrano-3916731b2/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ color: '#fff', p: 0.5 }}
-                >
-                    <LinkedInIcon fontSize="small" />
-                </IconButton>
+                    <a
+                        href="tel:+15035550123"
+                        style={{ color: '#fff', textDecoration: 'none' }}
+                    >
+                        (503) 555-0123
+                    </a>
+                </Stack>
+                <Stack direction="row" alignItems="center" spacing={1}>
+                    <FacebookIcon fontSize="small" />
+                    <a
+                        href="https://www.facebook.com/your-page-name"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: '#fff', textDecoration: 'none' }}
+                    >
+                        Facebook
+                    </a>
+                </Stack>
             </Stack>
 
             <p className="text-sm">
