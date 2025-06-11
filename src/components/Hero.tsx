@@ -1,6 +1,7 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container } from '@mui/material'
 import Image from 'next/image'
 import heroImage from '../../public/clean_kitchen.jpg'
+import Link from 'next/link'
 
 export const Hero = () => {
     return (
@@ -46,6 +47,21 @@ export const Hero = () => {
                     <h2 className="text-xl sm:text-2xl md:text-3xl mt-2 font-poppins">
                         Cleaning Service
                     </h2>
+                    <Link href="/contact" passHref>
+                        <Button
+                            variant="contained"
+                            sx={{
+                                backgroundColor: '#478BBC',
+                                width: '164px',
+                                borderRadius: 50,
+                                margin: '32px 0',
+                                fontFamily: 'var(--font-roboto)',
+                                fontWeight: 100,
+                            }}
+                        >
+                            Get a quote
+                        </Button>
+                    </Link>
                 </Container>
             </Box>
         </Box>
