@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const About = () => {
     return (
-        <div className="pt-20 flex-1">
+        <>
             <AboutUsContent />
             <Container maxWidth="sm">
                 <PhotoSlideshow />
@@ -32,7 +32,7 @@ const About = () => {
                     </Button>
                 </div>
             </Link>
-        </div>
+        </>
     )
 }
 
@@ -66,8 +66,8 @@ const AboutUsContent = () => {
                         With deep roots in the industry, our team brings years
                         of hands-on experience to every job - whether it's
                         residential, commercial, move-in/move-out or deep
-                        cleaning. We treat every hoome and business like it's
-                        our own and we take pride in building long-lasting
+                        cleaning. We treat every home and business like it's our
+                        own and we take pride in building long-lasting
                         relationships with our clients.
                     </p>
                     <p className="text-base sm:text-lg md:text-lg font-thin leading-relaxed mt-5">
