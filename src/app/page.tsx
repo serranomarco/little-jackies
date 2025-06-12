@@ -7,6 +7,8 @@ import Contact from './contact/page'
 import { MotionWrapper } from '@/components/utils/animations/MotionWrapper'
 import ScrollToTop from '@/components/utils/ScrollToTop'
 import PhotoSlideshow from '@/components/PhotoSlideshow'
+import Services from './services/page'
+import ServicesContent from '@/components/ServicesContent'
 
 const variants = {
     hidden: { opacity: 0, y: 40 },
@@ -31,7 +33,9 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-                <h1>Services go here</h1>
+                <div className="max-w-6xl mx-auto px-4 py-10">
+                    <ServicesContent />
+                </div>
             </MotionWrapper>
             <Divider sx={{ width: '75%', my: 4 }} />
             <MotionWrapper

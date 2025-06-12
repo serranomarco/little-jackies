@@ -23,7 +23,7 @@ import { usePathname } from 'next/navigation'
 const pages = [
     { tab: 'home', path: '' },
     { tab: 'about', path: 'about' },
-    { tab: 'services', path: 'projects' },
+    { tab: 'services', path: 'services' },
     { tab: 'contact us', path: 'contact' },
 ]
 
