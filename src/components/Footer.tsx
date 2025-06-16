@@ -1,4 +1,4 @@
-import { Typography, Stack, IconButton, Box } from '@mui/material'
+import { Stack, Box } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone'
@@ -41,7 +41,7 @@ const Footer = () => {
                     About
                 </Link>
                 <Link
-                    href="/projects"
+                    href="/services"
                     style={{ color: '#fff', textDecoration: 'underline' }}
                 >
                     Services

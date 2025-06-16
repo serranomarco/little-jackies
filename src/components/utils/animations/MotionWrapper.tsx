@@ -22,7 +22,7 @@ export function MotionWrapper({
     viewport,
     ...rest
 }: MotionWrapperProps) {
-    const MotionComponent = motion(Component)
+    const MotionComponent = motion.create(Component)
 
     return (
         <MotionComponent

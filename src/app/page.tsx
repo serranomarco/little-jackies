@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero'
-import { Box, Divider, NoSsr } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PhoneIcon from '@mui/icons-material/Phone'
@@ -7,7 +7,6 @@ import Contact from './contact/page'
 import { MotionWrapper } from '@/components/utils/animations/MotionWrapper'
 import ScrollToTop from '@/components/utils/ScrollToTop'
 import PhotoSlideshow from '@/components/PhotoSlideshow'
-import Services from './services/page'
 import ServicesContent from '@/components/ServicesContent'
 
 const variants = {
@@ -73,7 +72,7 @@ const HomePageContent = () => {
             initial="hidden"
             animate="visible"
         >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-8 text-[#478BBC]">
                 Why Choose Us?
             </h2>
 
