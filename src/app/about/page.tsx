@@ -39,7 +39,7 @@ const About = () => {
 const AboutUsContent = () => {
     return (
         <div className="max-w-4xl px-4 py-10 mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-10 text-[#478BBC]">
                 About Us
             </h2>
             <div className="flex flex-col md:flex-row justify-">
@@ -85,7 +85,7 @@ const AboutUsContent = () => {
 const WhyChooseUsContent = () => {
     return (
         <div className="max-w-3xl px-4 py-10 mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins text-center mb-10 text-[#478BBC]">
                 Why Choose Us?
             </h2>
 

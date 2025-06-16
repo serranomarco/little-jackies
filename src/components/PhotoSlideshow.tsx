@@ -72,7 +72,7 @@ const PhotoSlideshow = () => {
     }, [])
 
     return (
-        <Grid container spacing={1}>
+        <Grid container spacing={0.5}>
             {cleaningPhotosSets.map((set, i) => (
                 <Grid key={i} size={{ xs: 4, sm: 4, md: 4 }}>
                     <Box

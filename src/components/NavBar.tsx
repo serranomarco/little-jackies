@@ -16,7 +16,7 @@ import {
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import profilePic from '../../public/IMG_3519.jpg'
 import { usePathname } from 'next/navigation'
 
@@ -147,12 +147,36 @@ const MobileNav = () => {
 const NavBar = () => {
     const theme = useTheme()
     const isDesktop = useMediaQuery(theme.breakpoints.up('md'))
+    const [showNav, setShowNav] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+
+            if (currentScrollY < 50 || currentScrollY < lastScrollY) {
+                setShowNav(true)
+            } else {
+                setShowNav(false)
+            }
+
+            setLastScrollY(currentScrollY)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [lastScrollY])
 
     return (
         <NoSsr>
             <AppBar
-                position="absolute"
-                sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
+                position="fixed"
+                sx={{
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
+                    transform: showNav ? 'translateY(0)' : 'translateY(-100%)',
+                    transition: 'transform 0.3s ease-in-out',
+                }}
             >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters className="h-16 px-4">
