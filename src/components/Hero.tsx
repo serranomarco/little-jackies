@@ -1,6 +1,7 @@
 import { Box, Button, Container } from '@mui/material'
 import Image from 'next/image'
 import heroImage from '../../public/clean_kitchen.jpg'
+import logoImage from '../../public/logo.png'
 import Link from 'next/link'
 
 export const Hero = () => {
@@ -37,16 +38,31 @@ export const Hero = () => {
                     justifyContent: 'center',
                     color: 'white',
                     textAlign: 'center',
-                    backgroundColor: 'rgba(0,0,0,0.3)', // optional dark overlay for readability
+                    backgroundColor: 'rgba(0,0,0,0.3)',
                 }}
             >
-                <Container maxWidth="md" className="text-center">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins">
-                        Little Jackie's
-                    </h1>
-                    <h2 className="text-xl sm:text-2xl md:text-3xl mt-2 font-poppins">
-                        Cleaning Service
-                    </h2>
+                <Container
+                    maxWidth="md"
+                    className="text-center flex items-center flex-col"
+                >
+                    <Box
+                        sx={{
+                            width: { xs: '150px', sm: '200px', md: '300px' },
+                        }}
+                    >
+                        <Image
+                            src={logoImage}
+                            alt="Little Jackie's Logo"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                            priority
+                        />
+                    </Box>
                     <Link href="/contact" passHref>
                         <Button
                             variant="contained"

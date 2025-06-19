@@ -17,7 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import profilePic from '../../public/IMG_3519.jpg'
+import logoPic from '../../public/logo.png'
 import { usePathname } from 'next/navigation'
 
 const pages = [
@@ -29,12 +29,15 @@ const pages = [
 
 const LogoButton = () => (
     <Box className="h-16 flex items-center">
-        <Image
-            src={profilePic}
-            alt="Little Jackie's logo"
-            height={64}
-            className="object-contain"
-        />
+        <Link href="/" passHref>
+            <Image
+                src={logoPic}
+                alt="Little Jackie's logo"
+                height={64}
+                style={{ padding: '8px' }}
+                className="object-contain"
+            />
+        </Link>
     </Box>
 )
 
@@ -97,10 +100,6 @@ const MobileNav = () => {
             >
                 <MenuIcon />
             </IconButton>
-
-            <Box className="absolute left-1/2 transform -translate-x-1/2">
-                <LogoButton />
-            </Box>
 
             <Menu
                 anchorEl={anchorElNav}
