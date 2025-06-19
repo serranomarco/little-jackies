@@ -5,15 +5,15 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const cleaningPhotosSets = [
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/clean_kitchen.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
-    ['/IMG_3519.jpg', '/IMG_3519.jpg', '/IMG_3519.jpg'],
+    ['/slideshow1.jpeg', '/slideshow22.JPG', '/slideshow3.jpeg'],
+    ['/slideshow4.jpeg', '/slideshow20.JPG', '/slideshow6.jpeg'],
+    ['/slideshow7.jpeg', '/slideshow8.jpeg', '/slideshow9.jpeg'],
+    ['/slideshow10.jpeg', '/slideshow11.JPG', '/slideshow12.JPG'],
+    ['/slideshow13.JPG', '/slideshow14.JPG', '/slideshow15.JPG'],
+    ['/slideshow16.JPG', '/slideshow17.JPG', '/slideshow18.JPG'],
+    ['/slideshow19.JPG', '/slideshow20.JPG', '/slideshow21.JPG'],
+    ['/slideshow22.JPG', '/slideshow23.jpg', '/slideshow24.jpeg'],
+    ['/slideshow25.jpeg', '/slideshow26.jpeg', '/slideshow27.jpeg'],
 ]
 
 const getRandomDelay = () => 6000 + Math.random() * 6000
@@ -72,7 +72,7 @@ const PhotoSlideshow = () => {
     }, [])
 
     return (
-        <Grid container spacing={0.5}>
+        <Grid container spacing={0.5} mx={1}>
             {cleaningPhotosSets.map((set, i) => (
                 <Grid key={i} size={{ xs: 4, sm: 4, md: 4 }}>
                     <Box

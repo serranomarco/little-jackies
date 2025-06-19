@@ -64,30 +64,30 @@ const Footer = () => {
                 <Stack direction="row" alignItems="center" spacing={1}>
                     <EmailIcon fontSize="small" />
                     <a
-                        href="mailto:example@email.com"
+                        href="mailto:Littlejackiescleaning@gmail.com"
                         style={{ color: '#fff', textDecoration: 'none' }}
                     >
-                        example@email.com
+                        Littlejackiescleaning@gmail.com
                     </a>
                 </Stack>
                 <Stack direction="row" alignItems="center" spacing={1}>
                     <PhoneIcon fontSize="small" />
                     <a
-                        href="tel:+15035550123"
+                        href="tel:+19718880654"
                         style={{ color: '#fff', textDecoration: 'none' }}
                     >
-                        (503) 555-0123
+                        (971) 888-0654
                     </a>
                 </Stack>
                 <Stack direction="row" alignItems="center" spacing={1}>
                     <FacebookIcon fontSize="small" />
                     <a
-                        href="https://www.facebook.com/your-page-name"
+                        href="https://www.facebook.com/profile.php?id=61577707376333"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: '#fff', textDecoration: 'none' }}
                     >
-                        Facebook
+                        Visit us on Facebook!
                     </a>
                 </Stack>
             </Stack>
