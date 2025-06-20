@@ -55,7 +55,7 @@ const AboutUsContent = () => {
                 />
                 <div className="mx-4">
                     <p className="text-base sm:text-lg md:text-lg font-thin leading-relaxed">
-                        We are a proud family-owned cleaning compnay with years
+                        We are a proud family-owned cleaning company with years
                         of experience delivering reliable, high-quality cleaning
                         services. What started as a small family effort has
                         grown into a trusted name in the community, built on
@@ -71,7 +71,7 @@ const AboutUsContent = () => {
                         relationships with our clients.
                     </p>
                     <p className="text-base sm:text-lg md:text-lg font-thin leading-relaxed mt-5">
-                        At the hear of everything we do is a commitment to
+                        At the heart of everything we do is a commitment to
                         honesty, quality and care. When you choose us, you're
                         not just hiring a cleaning service, you're supporting a
                         local family business that genuinely values your trust.

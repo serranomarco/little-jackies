@@ -18,7 +18,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
     title: "Little Jackie's Cleaning Service",
     description:
-        'Cleaning Service that prides itself on affordable prices and easy to schedule cleaning for you residence or company',
+        'Affordable, next-day home and office cleaning in the Portland area with easy scheduling and trusted cleaners.',
 }
 
 export default function RootLayout({
@@ -32,6 +32,28 @@ export default function RootLayout({
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'LocalBusiness',
+                            name: "Little Jackie's Cleaning Service",
+                            image: 'https://littlejackies.com/logo.png',
+                            description:
+                                'Affordable, next-day home and office cleaning in the Portland area with easy scheduling and trusted cleaners.',
+                            url: 'https://littlejackies.com',
+                            telephone: '+1-971-888-0654',
+                            areaServed: {
+                                '@type': 'Place',
+                                name: 'Portland, OR',
+                            },
+                            sameAs: [
+                                'https://www.facebook.com/profile.php?id=61577707376333',
+                            ],
+                        }),
+                    }}
                 />
             </head>
             <body className={`${roboto.variable} ${poppins.variable}`}>
